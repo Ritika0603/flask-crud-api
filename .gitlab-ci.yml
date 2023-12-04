@@ -1,12 +1,3 @@
-trigger_pipeline:
-  script:
-    - curl -X POST \
-      -F token=$CI_JOB_TOKEN \
-      -F ref=feature-cipipeline \
-      https://gitlab.com/api/v4/projects/52683045/trigger/pipeline
-  only:
-    - triggers
-
 stages:
   - build
   - deploy
